@@ -1,0 +1,9 @@
+groups:
+    default:
+        default: true
+        prefix: "&7"
+        suffix: ""
+        parents: []
+        permissions: []
+        priority: a
+players:

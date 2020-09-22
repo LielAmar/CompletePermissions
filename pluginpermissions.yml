@@ -1,0 +1,28 @@
+# cp.chatcolor
+
+# cp.commands.cp.*
+# cp.commands.cp - permission for /cp (viewing the subcommands)
+# cp.commands.cp.config - permission for /CP config reload
+# cp.commands.cp.permissions - permission for /CP permissions reload
+# cp.commands.cp.groups - permission for /CP groups
+# cp.commands.cp.group - Permission for /CP group <group>
+# cp.commands.cp.group.create - permission for /CP group <group> create
+# cp.commands.cp.group.delete - permission for /CP group <group> delete
+# cp.commands.cp.group.add - permission for /CP group <group> add <permission>
+# cp.commands.cp.group.remove - permission for /CP group <group> remove <permission>
+# cp.commands.cp.group.prefix  - permission for /CP group <group> prefix <prefix>
+# cp.commands.cp.group.suffix - permission for /CP group <group> suffix <suffix>
+# cp.commands.cp.group.parents.add - permissions for /cp group <group> parents add <parent>
+# cp.commands.cp.group.parents.remove - permissions for /cp group <group> parents remove <parent>
+#
+# cp.commands.cp.player - permissions for /cp player <player>
+# cp.commands.cp.player.add - permissions for /cp player <player> add <permission>
+# cp.commands.cp.player.remove - permissions for /cp player <player> remove <permission>
+# cp.commands.cp.player.prefix - permissions for /cp player <player> prefix <prefix>
+# cp.commands.cp.player.suffix - permissions for /cp player <player> suffix <suffix>
+# cp.commands.cp.player.group.add  - permissions for /cp player <player> group add <group>
+# cp.commands.cp.player.group.remove  - permissions for /cp player <player> group remove <group>
+# cp.commands.cp.player.group.set  - permissions for /cp player <player> group set <group>
+
+# cp.commands.nick
+# cp.commands.nick.anygroup

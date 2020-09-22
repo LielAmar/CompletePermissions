@@ -1,0 +1,47 @@
+name: CompletePermissions
+main: bukkit.lielamar.completepermissions.CompletePermissions
+description: The complete permissions plugin
+author: Liel Amar
+version: 2.0
+
+commands:
+    completepermissions:
+        description: The plugin's main command
+        aliases: [cp]
+    nick:
+        description: Nick command
+    unnick:
+        description: Unnick command
+
+permissions:
+    cp.commands.cp.*:
+        description: Permissions to all of the /cp sub commands
+        default: false
+        children:
+            cp.commands.cp: true
+            cp.commands.cp.config: true
+            cp.commands.cp.permissions: true
+            cp.commands.cp.groups: true
+            cp.commands.cp.group: true
+            cp.commands.cp.group.create: true
+            cp.commands.cp.group.delete: true
+            cp.commands.cp.group.add: true
+            cp.commands.cp.group.remove: true
+            cp.commands.cp.group.prefix: true
+            cp.commands.cp.group.suffix: true
+            cp.commands.cp.group.parents.add: true
+            cp.commands.cp.group.parents.remove: true
+            cp.commands.cp.player: true
+            cp.commands.cp.player.add: true
+            cp.commands.cp.player.remove: true
+            cp.commands.cp.player.prefix: true
+            cp.commands.cp.player.suffix: true
+            cp.commands.cp.player.group.add: true
+            cp.commands.cp.player.group.remove: true
+            cp.commands.cp.player.group.set: true
+    cp.commands.nick.*:
+        description: Permissions to all of the /nick related commands
+        default: false
+        children:
+            cp.commands.nick: true
+            cp.commands.nick.anygroup: true

@@ -1,0 +1,32 @@
+# ==============================================
+# Thank you for using CompletePerms by Liel Amar
+# For any support:
+# - Discord: Liel Amar#4531
+# - Hypixel IGN: LielAmar
+# ==============================================
+
+# MySQL setup. If you don't have a MySQL server leave it as it is!
+MySQL:
+    enabled: false
+    host: "localhost"
+    username: "master"
+    password: "1234"
+    database: "completepermissions"
+    
+# Change the chat messaging format
+#
+# @name - Player's name | @displayname - Player's display name | @message - message | @coloredmessage - colored message
+# @permissionscoloredmessage - colored message if the player has the permission completepermissions.chatcolor
+ChatFormat: "@displayname&r: @permissionscoloredmessage"
+
+# Change the join & quit messages
+# You can decide whether to show to player's nick or IGN when they join/leave
+# Use @ign to use their ign and @nick to use their nick
+JoinMessage: "&e@nick has joined the game"
+QuitMessage: "&e@nick has left the game"
+
+# Groups that are listed here will be available for players who has the permission to /nick
+# If a players has the permission cp.commands.nick.anygroup, this won't matter
+NickGroups:
+- default
+- vip

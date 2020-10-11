@@ -11,7 +11,7 @@ import bukkit.lielamar.completepermissions.utils.Utils;
 
 public class BukkitPlayerChatEvents implements Listener {
 
-	@EventHandler (priority=EventPriority.HIGHEST)
+	@EventHandler (priority=EventPriority.LOWEST)
 	public void onPlayerChat(AsyncPlayerChatEvent e) {
 		Player p = e.getPlayer();
 		

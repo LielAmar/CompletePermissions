@@ -85,6 +85,11 @@ public class NickCommandManager implements CommandExecutor, BukkitCommandManager
 			String groupName = args[1];
 			Group group = CompletePermissions.getInstance().getGroupManager().getGroup(groupName);
 			
+			if(nick.length() < 4) {
+				p.sendMessage(Messages.youCantNickThisNickMessage());
+				return true;
+			}
+			
 			if(group == null) {
 				p.sendMessage(Messages.groupNotFoundMessage());
 				return true;

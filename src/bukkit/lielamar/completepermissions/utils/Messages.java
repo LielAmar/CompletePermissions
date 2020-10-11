@@ -128,6 +128,10 @@ public class Messages {
 		return ChatColor.RED + "Usage: /Nick <nick> <group>";
 	}
 	
+	public static String youCantNickThisNickMessage() {
+		return ChatColor.RED + "You can't select this nick as your nick!";
+	}
+	
 	public static String youCantNickThisGroupMessage() {
 		return ChatColor.RED + "You can't select this group as your nick group!";
 	}

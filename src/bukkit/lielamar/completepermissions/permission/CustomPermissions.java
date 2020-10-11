@@ -56,6 +56,12 @@ public class CustomPermissions extends PermissibleBase {
 	 */
 	@Override
 	public boolean hasPermission(String permission) {
+		if(CompletePermissions.getInstance() == null) return false;
+		if(CompletePermissions.getInstance().getUserManager() == null) return false;
+		if(CompletePermissions.getInstance().getUserManager().getPlayer(p) == null) return false;
+		if(CompletePermissions.getInstance().getUserManager().getPlayer(p).getPermissionsAttachement() == null) return false;
+		if(CompletePermissions.getInstance().getUserManager().getPlayer(p).getPermissionsAttachement().getPermissions() == null) return false;
+		
 		boolean perm = (CompletePermissions.getInstance().getUserManager().getPlayer(p).getPermissionsAttachement().getPermissions().keySet().contains(permission) || children(permission)
 				|| CompletePermissions.getInstance().getUserManager().getPlayer(p).getPermissionsAttachement().getPermissions().keySet().contains("*"));
 		return perm;	

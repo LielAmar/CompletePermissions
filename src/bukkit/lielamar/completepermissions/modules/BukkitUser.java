@@ -219,8 +219,8 @@ public class BukkitUser implements User {
 	 */
 	@Override
 	public BukkitUser reloadName(String prefix, String suffix) {
-		this.getPlayer().setPlayerListName(prefix + this.getPlayer().getName() + suffix);
 		this.getPlayer().setDisplayName(prefix + this.getPlayer().getName() + suffix);
+		this.getPlayer().setPlayerListName(prefix + this.getPlayer().getName() + suffix);
 		return this;
 	}
 

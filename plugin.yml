@@ -2,7 +2,7 @@ name: CompletePermissions
 main: bukkit.lielamar.completepermissions.CompletePermissions
 description: The complete permissions plugin
 author: Liel Amar
-version: 2.0
+version: 1.1.4
 
 commands:
     completepermissions:

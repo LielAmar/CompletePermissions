@@ -17,7 +17,7 @@ MySQL:
 #
 # @name - Player's name | @displayname - Player's display name | @message - message | @coloredmessage - colored message
 # @permissionscoloredmessage - colored message if the player has the permission completepermissions.chatcolor
-ChatFormat: "@displayname&r: @permissionscoloredmessage"
+ChatFormat: "%prefix%%name%%suffix%&r: %message%"
 
 # Change the join & quit messages
 # You can decide whether to show to player's nick or IGN when they join/leave

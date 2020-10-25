@@ -1,17 +1,25 @@
-package bukkit.lielamar.completepermissions;
+package com.lielamar.completepermissions;
 
 import java.util.Map;
 
 import org.bukkit.entity.Player;
 
-import net.lielamar.core.interfaces.moduls.Group;
-import net.lielamar.core.interfaces.moduls.User;
+import com.lielamar.utils.core.interfaces.modules.Group;
+import com.lielamar.utils.core.interfaces.modules.User;
 
 public class CompletePermissionsAPI {
 
 	private static CompletePermissionsAPI instance = new CompletePermissionsAPI();
 	public static CompletePermissionsAPI getInstance() { return instance; }
 	private CompletePermissionsAPI() {}
+	
+	public void setGroupToUser(Player player, String groupName) {
+		Group group = getGroup(groupName);
+		if(group == null) return;
+		
+		CompletePermissions.getInstance().getStorageManager().getStoragePlayerGetterSetter()
+			.setGroupToPlayer(player, group);
+	}
 	
 	public void addGroupToUser(Player player, String groupName) {
 		Group group = getGroup(groupName);

@@ -1,9 +1,10 @@
-package bukkit.lielamar.completepermissions.modules;
+package com.lielamar.completepermissions.modules;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachment;
@@ -11,10 +12,10 @@ import org.bukkit.scoreboard.NameTagVisibility;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
-import bukkit.lielamar.completepermissions.CompletePermissions;
-import bukkit.lielamar.completepermissions.managers.nick.NickManager;
-import net.lielamar.core.interfaces.moduls.Group;
-import net.lielamar.core.interfaces.moduls.User;
+import com.lielamar.completepermissions.CompletePermissions;
+import com.lielamar.completepermissions.managers.nick.NickManager;
+import com.lielamar.utils.core.interfaces.modules.Group;
+import com.lielamar.utils.core.interfaces.modules.User;
 
 public class BukkitUser implements User {
 	
@@ -95,7 +96,7 @@ public class BukkitUser implements User {
 	}
 	
 	/**
-	 * @param group   A {@link net.lielamar.core.interfaces.moduls.Group} object
+	 * @param group   A {@link com.lielamar.utils.core.interfaces.modules.lielamar.core.interfaces.moduls.Group} object
 	 * @return        Whether or not the player is related to the group
 	 */
 	@Override
@@ -231,9 +232,13 @@ public class BukkitUser implements User {
 	 */
 	@Override
 	public BukkitUser reloadAboveHeadName(String prefix, String suffix, String action) {
-		
-		Scoreboard sb = p.getScoreboard();
-		if (sb.getTeam(p.getName()) == null) 
+		Scoreboard sb;
+		if(p.getScoreboard() == null)
+			sb = Bukkit.getScoreboardManager().getNewScoreboard();
+		else
+			sb = p.getScoreboard();
+			
+		if(sb.getTeam(p.getName()) == null) 
 			sb.registerNewTeam(p.getName());
 		Team team = sb.getTeam(p.getName());
 		team.setPrefix(prefix);

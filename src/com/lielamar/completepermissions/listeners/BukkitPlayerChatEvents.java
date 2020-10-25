@@ -1,4 +1,4 @@
-package bukkit.lielamar.completepermissions.listeners;
+package com.lielamar.completepermissions.listeners;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -7,7 +7,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-import bukkit.lielamar.completepermissions.utils.Utils;
+import com.lielamar.completepermissions.CompletePermissions;
+import com.lielamar.completepermissions.utils.Utils;
+import com.lielamar.utils.core.interfaces.modules.User;
 
 public class BukkitPlayerChatEvents implements Listener {
 
@@ -18,12 +20,14 @@ public class BukkitPlayerChatEvents implements Listener {
 		String format = Utils.getInstance().getFormat();
 		if(format == null) return;
 		
+		User u = CompletePermissions.getInstance().getUserManager().getUsers().get(p.getUniqueId());
+		
 		format = ChatColor.translateAlternateColorCodes('&', format);
-		format = format.replaceAll("@name", p.getName());
-		format = format.replaceAll("@displayname", p.getDisplayName());
-		format = format.replace("@message", e.getMessage());
-		format = format.replace("@coloredmessage", ChatColor.translateAlternateColorCodes('&', e.getMessage()));
-
+		format = format.replaceAll("%prefix%", u.getPrefix());
+		format = format.replaceAll("%suffix%", u.getSuffix());
+		format = format.replaceAll("%name%", "%s");
+		format = format.replaceAll("%message%", "%s");
+		
 		if(p.hasPermission("cp.chatcolor"))
 			format = format.replace("@permissionscoloredmessage", ChatColor.translateAlternateColorCodes('&', e.getMessage()));
 		else

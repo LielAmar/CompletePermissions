@@ -76,6 +76,12 @@ public class BukkitUserManager implements UserManager {
 	public void ejectPlayer(Player p) {
 		PermissibleInjector.eject(p);
 		
+		if(Bukkit.getScoreboardManager().getMainScoreboard().getTeam(p.getName()) != null)
+			Bukkit.getScoreboardManager().getMainScoreboard().getTeam(p.getName()).unregister();
+		if(p.getScoreboard().getTeam(p.getName()) != null)
+			p.getScoreboard().getTeam(p.getName()).unregister();
+		
+		
 		if(this.users.containsKey(p.getUniqueId())) {
 			this.users.put(p.getUniqueId(), null);
 			this.users.remove(p.getUniqueId());

@@ -7,9 +7,21 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
+<<<<<<< HEAD
+<<<<<<< HEAD:src/com/lielamar/completepermissions/listeners/BukkitPlayerChatEvents.java
 import com.lielamar.completepermissions.CompletePermissions;
 import com.lielamar.completepermissions.utils.Utils;
 import com.lielamar.utils.core.interfaces.modules.User;
+=======
+import bukkit.lielamar.completepermissions.CompletePermissions;
+import bukkit.lielamar.completepermissions.utils.Utils;
+import net.lielamar.core.interfaces.moduls.User;
+>>>>>>> 104fd4b26aab720c1ba9103fa6ad5b1e80570537:_old/bukkit/lielamar/completepermissions/listeners/BukkitPlayerChatEvents.java
+=======
+import com.lielamar.completepermissions.CompletePermissions;
+import com.lielamar.completepermissions.utils.Utils;
+import com.lielamar.utils.core.interfaces.modules.User;
+>>>>>>> 104fd4b26aab720c1ba9103fa6ad5b1e80570537
 
 public class BukkitPlayerChatEvents implements Listener {
 

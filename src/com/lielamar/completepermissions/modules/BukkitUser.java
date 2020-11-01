@@ -32,8 +32,11 @@ public class BukkitUser implements User {
 		this.prefix = prefix;
 		this.suffix = suffix;
 		this.p = p;
-		permissionsAttachement = this.p.addAttachment(CompletePermissions.getInstance());
-		reloadPlayer();
+
+		permissionsAttachement = this.p.addAttachment(CompletePermissions.getPlugin(CompletePermissions.class));
+
+		
+//		reloadPlayer();
 	}
 	
 	@Override
@@ -87,12 +90,15 @@ public class BukkitUser implements User {
 	
 	@Override
 	public PermissionAttachment getPermissionsAttachement() {
-		return permissionsAttachement;
+		return this.permissionsAttachement;
+//		return BukkitUserManager.getInstance().attachments.get(this.p.getUniqueId().toString());
 	}
 	
 	@Override
 	public void setPermissionsAttachement(PermissionAttachment permissionsAttachement) {
 		this.permissionsAttachement = permissionsAttachement;
+//		BukkitUserManager.getInstance().attachments.put(this.p.getUniqueId().toString(), permissionsAttachement);;
+//		this.permissionsAttachement = permissionsAttachement;
 	}
 	
 	/**
@@ -190,8 +196,15 @@ public class BukkitUser implements User {
 	 */
 	@Override
 	public BukkitUser reloadPermissions() {
+		
+//		if(BukkitUserManager.getInstance().attachments.containsKey(p.getUniqueId().toString())
+//				&& BukkitUserManager.getInstance().attachments.get(p.getUniqueId().toString()) != null)
+//			this.p.removeAttachment(BukkitUserManager.getInstance().attachments.get(p.getUniqueId().toString()));
+		
+//		setPermissionsAttachement(p.addAttachment(CompletePermissions.getInstance()));
+
 		this.p.removeAttachment(permissionsAttachement);
-		permissionsAttachement = p.addAttachment(CompletePermissions.getInstance());
+		permissionsAttachement = this.p.addAttachment(CompletePermissions.getInstance());
 		
 		List<String> playerPermissions = new ArrayList<String>();
 		for(String permission : getPermissions())

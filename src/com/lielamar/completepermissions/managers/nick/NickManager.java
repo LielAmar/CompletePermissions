@@ -16,6 +16,8 @@ import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_13_R1;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_13_R2;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_14_R1;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_15_R1;
+import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_16_R1;
+import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_16_R2;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_8_R1;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_8_R2;
 import com.lielamar.completepermissions.managers.nick.versions.NMS_v1_8_R3;
@@ -123,6 +125,10 @@ public class NickManager {
 				return new NMS_v1_14_R1();
 			case "v1_15_R1":
 				return new NMS_v1_15_R1();
+			case "v1_16_R1":
+				return new NMS_v1_16_R1();
+			case "v1_16_R2":
+				return new NMS_v1_16_R2();
 			default:
 				CompletePermissions.getConsoleSender().sendMessage(ChatColor.RED + "You are using a unsupported version. Please use a supported version to use this plugin!");
 				CompletePermissions.getInstance().getPluginLoader().disablePlugin(CompletePermissions.getInstance());

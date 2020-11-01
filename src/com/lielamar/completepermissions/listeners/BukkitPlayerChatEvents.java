@@ -23,8 +23,10 @@ public class BukkitPlayerChatEvents implements Listener {
 		User u = CompletePermissions.getInstance().getUserManager().getUsers().get(p.getUniqueId());
 		
 		format = ChatColor.translateAlternateColorCodes('&', format);
-		format = format.replaceAll("%prefix%", u.getPrefix());
-		format = format.replaceAll("%suffix%", u.getSuffix());
+		if(u.getPrefix() != null)
+			format = format.replaceAll("%prefix%", u.getPrefix());
+		if(u.getSuffix() != null)
+			format = format.replaceAll("%suffix%", u.getSuffix());
 		format = format.replaceAll("%name%", "%s");
 		format = format.replaceAll("%message%", "%s");
 		

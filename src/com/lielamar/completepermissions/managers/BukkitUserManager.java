@@ -19,6 +19,7 @@ public class BukkitUserManager implements UserManager {
 
 	private static BukkitUserManager instance = new BukkitUserManager();
 	private HashMap<UUID, User> users = null;
+//	public LinkedHashMap<String, PermissionAttachment> attachments = null;
 	
 	private BukkitUserManager() {}
 	
@@ -31,6 +32,7 @@ public class BukkitUserManager implements UserManager {
 	 */
 	public void setup() {
 		users = new HashMap<UUID, User>();
+//		attachments = new LinkedHashMap<String, PermissionAttachment>();
 		
 		for(Player pl : Bukkit.getOnlinePlayers()) {
 			injectPlayer(pl);

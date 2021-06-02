@@ -1,7 +1,7 @@
 # CompletePermissions
 
 [![Discord](https://img.shields.io/discord/416652224505184276?color=%235865F2&label=Join%20My%20Discord)](https://discord.gg/NzgBrqR)
-[![Spigot](https://img.shields.io/badge/dynamic/json?color=yellow&label=Check%20it%20on%20Spigot&query=downloads&suffix=%20Downloads&url=https%3A%2F%2Fapi.spiget.org%2Fv2%2Fresources%2F73008)](https://www.spigotmc.org/resources/85594/)
+[![Spigot](https://img.shields.io/badge/dynamic/json?color=yellow&label=Check%20it%20on%20Spigot&query=downloads&suffix=%20Downloads&url=https%3A%2F%2Fapi.spiget.org%2Fv2%2Fresources%2F73008)](https://www.spigotmc.org/resources/73008/)
 
 ## Information
 
